@@ -12,11 +12,6 @@ import org.springframework.context.annotation.Configuration
 @ComponentScan
 @Configuration
 class DemoApplication {
-
-	@Bean
-	fun helloService(): HelloService {
-		return ConsoleHelloService()
-	}
 }
 
 fun main(args: Array<String>) {
