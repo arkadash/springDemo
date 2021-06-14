@@ -1,7 +1,10 @@
 package com.hello.service
 
-class ConsoleHelloService: HelloService {
+import com.annotations.Quala
+
+class ConsoleHelloService(val quala: Quala): HelloService {
+
     override fun sayHello(text: String) {
-        println("Hello $text!!");
+        println("Hello $text!! from ${quala.name}");
     }
 }

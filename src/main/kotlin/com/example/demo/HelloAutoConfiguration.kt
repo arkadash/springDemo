@@ -1,5 +1,6 @@
-package external
+package com.example.demo
 
+import com.annotations.Quala
 import com.hello.service.ConsoleHelloService
 import com.hello.service.HelloService
 import org.springframework.context.annotation.Bean
@@ -10,6 +11,8 @@ class HelloAutoConfiguration {
 
     @Bean
     fun helloService(): HelloService {
-        return ConsoleHelloService()
+        val quala = Quala(name = "Moshe")
+
+        return ConsoleHelloService(quala)
     }
 }
